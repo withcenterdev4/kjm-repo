@@ -1,5 +1,7 @@
 <script>
 import First from './FirstComp.svelte'
+let active = true
+let links = ['Home', 'Services', 'Account']
 </script>
 <h1>main page</h1>
 
@@ -9,3 +11,22 @@ import First from './FirstComp.svelte'
 
 <p>another one</p>
 <First />
+
+{#if active}
+    <section>
+        <h1>KJM</h1>
+        <nav>
+            <ul>
+                {#each links as link}
+                    <li>{link}</li>
+                {/each}
+            </ul>
+        </nav>
+    </section>
+{/if}
+
+
+
+
+
+
