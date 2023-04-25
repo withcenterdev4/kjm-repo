@@ -11,6 +11,8 @@ let accounts = []
 let newArray = [1, 2, 3, 4, 5]
 
 
+
+
 function forLinks(i) {
     if(i === 2) {
         act = false
@@ -63,6 +65,7 @@ function forQual() {
     {/if}
 
 {/if}
+
 
 
 
