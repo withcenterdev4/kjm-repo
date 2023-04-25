@@ -1,6 +1,11 @@
 <script lang="ts">
 	import { listen } from "svelte/internal";
+    import { setContext } from 'svelte'
+    let vals = ''
 
+    //for context
+    let myName = 'kjm'
+    setContext("myKey", myName)
 let value = ''
 //typescript
 interface data  {number: Number, operation: String}
@@ -17,9 +22,11 @@ function equals() {
      value = eval(value)
      value = value
 }
+
+
 </script>
 
-<h1>This is second comp</h1>
+<p class="text-3xl font-bold underline">This is second comp</p>
 
 <input bind:value readonly>
 <button on:click={() => numVal(2)}>2</button>
@@ -33,27 +40,11 @@ function equals() {
 <h1>{list.operation} - </h1>
 
 
+<input bind:value={vals}>
+<button on:click={() => vals++}>incre</button>
 
 
 
 
-<!-- <script lang="ts">
-    interface User {
-        name: string;
-        id: number;
-    }
-    
-    class UserAccount {
-        name: string;
-        id: number;
-    
-        constructor(name: string, id: number) {
-        this.name = name;
-        this.id = id;
-        }
-    }
-    
-    const user: User = new UserAccount("Murphy", 1)
-</script>
-<h1>{user.name}</h1> -->
+
 
